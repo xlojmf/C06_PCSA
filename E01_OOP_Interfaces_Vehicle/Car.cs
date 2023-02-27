@@ -16,9 +16,18 @@ namespace E01_OOP_Interfaces_Vehicle
             Colour = "";
         }
 
+
+        public enum Cor 
+        {
+        Azul,
+        Amarelo,
+        Verde,      
+        }
+
+
         public Car(int vehicleId, string model, string description, string colour) : base ( vehicleId, model, description)
         {
-            Colour = colour;
+            Colour = Cor colour;
         }
         #endregion
 
