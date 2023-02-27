@@ -8,17 +8,17 @@ namespace E01_OOP_Interfaces_Vehicle
 {
     internal class Car : Vehicle, ICar
     {
-        public string Type { get; set; }
+        public string Colour { get; set; }
 
         #region Constructors
         public Car() : base()
         {
-            Type = "";
+            Colour = "";
         }
 
-        public Car(int vehicleId, string model, string description, string type) : base ( vehicleId, model, description)
+        public Car(int vehicleId, string model, string description, string colour) : base ( vehicleId, model, description)
         {
-            Type = type;
+            Colour = colour;
         }
         #endregion
 

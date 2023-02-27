@@ -8,17 +8,17 @@ namespace E01_OOP_Interfaces_Vehicle
 {
     internal class Plane : Vehicle,IPlane
     {
-        public string Type { get; set; }
+        public string TypeFuel { get; set; }
 
         #region Constructors
         public Plane() : base()
         {
-            Type = "";
+            TypeFuel = "";
         }
 
-        public Plane(int vehicleId, string model, string description, string type) : base(vehicleId, model, description)
+        public Plane(int vehicleId, string model, string description, string typefuel) : base(vehicleId, model, description)
         {
-            Type = type;
+            TypeFuel = typefuel;
         }
         #endregion
 

@@ -8,7 +8,7 @@ namespace E01_OOP_Interfaces_Vehicle
 {
     internal interface ICar : IVehicle
     {
-        string Type { get; }
+        string Colour { get; }
 
         void Drive();
     }

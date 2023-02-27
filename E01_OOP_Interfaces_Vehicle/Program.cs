@@ -25,6 +25,7 @@ namespace E01_OOP_Interfaces_Vehicle
 
             submarine.RegisterVehicle();
             submarine.TerminateVehicle();
+            submarine.TerminateVehicle(true);
             submarine.Dive();
 
             plane.RegisterVehicle();

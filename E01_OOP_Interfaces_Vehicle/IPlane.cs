@@ -8,7 +8,7 @@ namespace E01_OOP_Interfaces_Vehicle
 {
     internal interface IPlane
     {
-        string Type { get; }
+        string TypeFuel { get; }
 
         void Fly();
     }

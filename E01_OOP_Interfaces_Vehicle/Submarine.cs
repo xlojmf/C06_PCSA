@@ -8,17 +8,17 @@ namespace E01_OOP_Interfaces_Vehicle
 {
     internal class Submarine : Vehicle, ISubmarine
     {
-        public string Type { get; set; }
+        public bool Pilot { get; set; }
 
         #region Constructors
         public Submarine() : base()
         {
-            Type = "";
+            Pilot = true;
         }
 
-        public Submarine(int vehicleId, string model, string description, string type) : base(vehicleId, model, description)
+        public Submarine(int vehicleId, string model, string description, bool pilot) : base(vehicleId, model, description)
         {
-            Type = type;
+            Pilot = pilot;
         }
         #endregion
 
@@ -31,7 +31,17 @@ namespace E01_OOP_Interfaces_Vehicle
 
         public override void TerminateVehicle()
         {
-            Console.WriteLine("terminate sub");
+            Console.WriteLine("Terminate Sub");           
+        }
+
+        public void TerminateVehicle(bool pilot)
+        {
+            if (pilot == true)
+                { Console.WriteLine("Submarino anda"); }
+            else
+                {
+                    Console.WriteLine("vai afundar");
+                }
         }
 
         public void Dive()

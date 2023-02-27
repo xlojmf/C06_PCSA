@@ -8,8 +8,9 @@ namespace E01_OOP_Interfaces_Vehicle
 {
     internal interface ISubmarine : IVehicle
     {
-        string Type { get; }
+        bool Pilot { get; }
 
         void Dive();
+        void TerminateVehicle(bool pilot);
     }
 }
