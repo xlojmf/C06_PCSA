@@ -17,6 +17,8 @@ namespace E01_OOP_Interfaces_Vehicle
 
         public EnumFuel TypeFuel { get; set; }
 
+        string IPlane.TypeFuel => throw new NotImplementedException();
+
         #region Constructors
         public Plane() : base()
         {
