@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace E02_OOP_Collections_Car
 {
-    public class Car
+    public class Car : ICar
     {
 
         #region Properties
@@ -57,11 +57,11 @@ namespace E02_OOP_Collections_Car
             RegisterDate = DateTime.MinValue;
         
         }
-        public Car(EnumBrand brand, EnumModel model, string cilindrada,)
+        public Car(EnumBrand brand, EnumModel model, string cilindrada)
         {
             Brand = EnumBrand.BMW;
             Model = EnumModel.Z4;
-            Cilindrada = "10000";
+            Cilindrada = "100cc";
         }
         public Car(EnumBrand brand, EnumModel model ,EnumColour colour, string matricula, string cilindrada, int maxSpeed, DateTime registerDate)
         {
@@ -76,9 +76,11 @@ namespace E02_OOP_Collections_Car
         #endregion
 
         #region Destructor - Carro para a Sucata
-
+        ~Car()
+        {
+            Console.WriteLine("Carro para a Sucata");
+        }
         #endregion
-
 
         #region Methods
         public Car CreateCar()
@@ -101,15 +103,15 @@ namespace E02_OOP_Collections_Car
 
             return new Car(brand, model, colour, matricula, cilindrada, maxSpeed, registerDate);
         }
-        public void StopCar()
+        public void StopCar(Car car)
         {
-            //Parar: velocidade passa a zero
+            MaxSpeed = 0;
         }
-        public void AcellCar()
+        public void AcellCar(int speed, Car car)
         {
             //Acelerar: incrementa a velocidade com o valor de aceleração;
         }
-        public void ReduceSpeedCar()
+        public void ReduceSpeedCar(int speed, Car car)
         {     
             //Desacelerar: decrementa a velocidade com o valor de desaceleração;
         }
@@ -142,7 +144,6 @@ namespace E02_OOP_Collections_Car
             }
             return brand;
         }
-
         public EnumModel GetCarModel()
         {
             Console.WriteLine("Choose the car's model:");
@@ -180,7 +181,6 @@ namespace E02_OOP_Collections_Car
             }
             return model;
         }
-
         public EnumColour GetCarColour()
         {
             Console.WriteLine("Choose the car's colour:");
@@ -217,11 +217,25 @@ namespace E02_OOP_Collections_Car
                 break;
             }
             return colour;
-        }
-        //Coleção genérica de carros
-        //Criar uma lista de 5 carros
-        //Listar
+        }     
+        public List<Car> CreateCarsList()
+        {
+            List<Car> carList = new List<Car>();
+            carList.Add(new Car(EnumBrand.BMW, EnumModel.Z4, EnumColour.Verde, "22-hh-30", "2000cc", 180, new DateTime(2022, 2, 15)));
+            carList.Add(new Car(EnumBrand.Dacia, EnumModel.Sandero, EnumColour.Vermelho, "22-hh-31", "1800cc", 200, new DateTime(2021, 5, 10)));
+            carList.Add(new Car(EnumBrand.Tesla, EnumModel.Roadster, EnumColour.Cinza, "22-hh-32", "5000cc", 300, new DateTime(2023, 1, 1)));
+            carList.Add(new Car(EnumBrand.Tesla, EnumModel.Model3, EnumColour.Amarelo, "22-hh-33", "3000cc", 240, new DateTime(2022, 8, 20)));
+            carList.Add(new Car(EnumBrand.Dacia, EnumModel.Spring, EnumColour.Azul, "22-hh-34", "4000cc", 260, new DateTime(2021, 8, 20)));
 
+            return carList;
+        }
+        public void ListCarList(List<Car> car) 
+        {
+            foreach (Car item in car)
+            {
+                Console.WriteLine($"Brand: {item.Brand}\nModel: {item.Model}\nColour: {item.Colour}\nLicense Plate: {item.Matricula}\nCilindrada: {item.Cilindrada}\nMax Speed: {item.MaxSpeed}\nRegistration Date: {item.RegisterDate}\n\n");
+            }
+        }
 
         #endregion
 
