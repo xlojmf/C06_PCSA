@@ -43,6 +43,14 @@ namespace E02_OOP_Collections_Car
         string Cilindrada { get; set; }
         int MaxSpeed { get; set; }
         DateTime RegisterDate { get; set; }
+
+        string ICar.Matricula => throw new NotImplementedException();
+
+        string ICar.Cilindrada => throw new NotImplementedException();
+
+        int ICar.MaxSpeed => throw new NotImplementedException();
+
+        DateTime ICar.RegisterDate => throw new NotImplementedException();
         #endregion
 
         #region Constructors
