@@ -38,7 +38,7 @@ namespace E01_Linq
         {
             var clientNameAndCountry = from client in clientDictionary.Values
                                        join cidade in cidadesList on client.City equals cidade.City
-                                       select new { ClientName = client.Name, Country = cidade.Country };
+                                       select new { ClientName = client.Name, cidade.Country };
 
             foreach (var item in clientNameAndCountry)
             {
