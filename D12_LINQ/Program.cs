@@ -11,7 +11,7 @@ namespace D12_LINQ
     {
         static void Main(string[] args)
         {
-
+            /*
             string[] ola = D01_HelloWord.HelloWorldMethodSyntax();
 
             foreach (string n in ola) {
@@ -27,8 +27,12 @@ namespace D12_LINQ
 
             List<string> names= Name.CreateNamesList();
             Name.ParseNamesList(names);
+            
+            Name.ParseNamesListQuery(names);*/
 
-            Name.ParseNamesListQuery(names);
+
+            List<int> numbers= RandomInts.CreateIntList();
+            RandomInts.ListNumbers(numbers);
 
             Console.ReadKey();
 

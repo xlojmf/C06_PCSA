@@ -21,8 +21,6 @@ namespace D00_Utility
             Console.WriteLine(new string('-', 50));
             Console.WriteLine($"\t{title.ToUpper()}");
             Console.WriteLine(new string('-', 50));
-            Console.WriteLine("\n\n");
-
         }
 
         public static void TerminateConsole()

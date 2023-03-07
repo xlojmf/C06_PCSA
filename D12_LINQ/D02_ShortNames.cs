@@ -10,7 +10,7 @@ namespace D12_LINQ
     {
 
         // de uma lista generica de strings com 10 nomes linq para retirar retirar todos os numedos = 
-
+        // lista de 10 numeros entre 0-50 aleotoriamente numeros > 10
         public static List<string> CreateNamesList()
         {
             List<string> names = new List<string>() { "Alice", "Bobo", "Charlie", "Dave", "Emily", "Frank", "Grace", "Harry", "Isabella", "Jack" };
@@ -20,7 +20,7 @@ namespace D12_LINQ
         public static void ParseNamesList(List<string> names) 
         {
 
-            List<string> filteredNames = names.Where(n => n.Length > names.Min(x => x.Length)).ToList();
+            List<string> filteredNames = names.Where(n => n.Length <= names.Min(x => x.Length)).ToList();
 
             foreach (string name in filteredNames)
             { 
@@ -42,6 +42,7 @@ namespace D12_LINQ
             }
 
         }
+
 
     }
 }
