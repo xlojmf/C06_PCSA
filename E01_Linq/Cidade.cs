@@ -33,8 +33,8 @@ namespace E01_Linq
             return cidadesList;
         }
 
-        
-        public static void GetClientNameAndCountry(Dictionary<int, Cliente> clientDictionary, List<Cidade> cidadesList)
+        // not using
+        public static void GetClientNameAndCountryQuery(Dictionary<int, Cliente> clientDictionary, List<Cidade> cidadesList)
         {
             var clientNameAndCountry = from client in clientDictionary.Values
                                        join cidade in cidadesList on client.City equals cidade.City
@@ -45,8 +45,19 @@ namespace E01_Linq
                 Console.WriteLine($"{item.ClientName} - {item.Country}");
             }
         }
-        
 
+        public static void GetClientNameAndCountry(Dictionary<int, Cliente> clientDictionary, List<Cidade> cidadesList)
+        {
+            var clientNameAndCountry = clientDictionary.Values.Join(cidadesList,
+                client => client.City,
+                cidade => cidade.City,
+                (client, cidade) => new { ClientName = client.Name, cidade.Country });
+
+            foreach (var item in clientNameAndCountry)
+            {
+                Console.WriteLine($"{item.ClientName} - {item.Country}");
+            }
+        }
 
     }
 }
