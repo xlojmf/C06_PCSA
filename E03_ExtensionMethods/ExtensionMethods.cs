@@ -12,18 +12,18 @@ namespace E03_ExtensionMethods
         internal static string ConcaterParaMaiusculas(this string text1, string text2)
         {
             
-            return (text1 + " " + text2).ToUpper();
+            return $"{text1} {text2.ToUpper()}";
 
         }
 
         internal static string FormatarParaEuro(this string text1)
         {
-            return (text1 + " £");
+            return $"{text1} £";
         }
 
         internal static string FormatarParaEuro(this int text1)
         {
-            return (text1.ToString() + " £");
+            return $"{text1} £";
         }
 
     }
