@@ -23,27 +23,11 @@ namespace E04_LoginLocalMethods
             bool isUsernameCorrect = ValidateUser(username);
             bool isPasswordCorrect = ValidatePassword(password);
 
-            if (isUsernameCorrect && isPasswordCorrect)
-            {
-                Console.WriteLine("User is logged in");
-            }
-            else
-            {
-                if (!isUsernameCorrect && !isPasswordCorrect)
-                {
-                    Console.WriteLine("Incorrect username and password");
-                }
-                else if (!isUsernameCorrect)
-                {
-                    Console.WriteLine("Incorrect username");
-                    Console.WriteLine("Password is correct");
-                }
-                else
-                {
-                    Console.WriteLine("Username is valid");
-                    Console.WriteLine("Incorrect password");
-                }
-            }
+            string message = isUsernameCorrect && isPasswordCorrect ? "User is Logged in"
+                : !isUsernameCorrect && !isPasswordCorrect ? "Incorrect username and password"
+                    : !isUsernameCorrect ? "Incorrect username\nCorrect password": "Valid username\nIncorrect password";
+
+            Console.WriteLine(message);
 
             bool ValidateUser(string _)
             {
