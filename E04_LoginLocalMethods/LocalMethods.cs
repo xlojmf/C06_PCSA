@@ -29,7 +29,20 @@ namespace E04_LoginLocalMethods
             }
             else
             {
-                Console.WriteLine("Wrong credentials");
+                if (!isUsernameCorrect && !isPasswordCorrect)
+                {
+                    Console.WriteLine("Incorrect username and password");
+                }
+                else if (!isUsernameCorrect)
+                {
+                    Console.WriteLine("Incorrect username");
+                    Console.WriteLine("Password is correct");
+                }
+                else
+                {
+                    Console.WriteLine("Username is valid");
+                    Console.WriteLine("Incorrect password");
+                }
             }
 
             bool ValidateUser(string _)
