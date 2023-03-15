@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D14_AdvancedExtension", "D1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E03_ExtensionMethods", "E03_ExtensionMethods\E03_ExtensionMethods.csproj", "{6A0E3CCF-3FD6-473F-9600-FCC2E47AE55C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04_LoginLocalMethods", "E04_LoginLocalMethods\E04_LoginLocalMethods.csproj", "{130E5076-7BE9-4A15-97DC-0B1BC61F29E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{6A0E3CCF-3FD6-473F-9600-FCC2E47AE55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A0E3CCF-3FD6-473F-9600-FCC2E47AE55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A0E3CCF-3FD6-473F-9600-FCC2E47AE55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130E5076-7BE9-4A15-97DC-0B1BC61F29E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130E5076-7BE9-4A15-97DC-0B1BC61F29E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130E5076-7BE9-4A15-97DC-0B1BC61F29E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130E5076-7BE9-4A15-97DC-0B1BC61F29E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

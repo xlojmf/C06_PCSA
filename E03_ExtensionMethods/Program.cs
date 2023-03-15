@@ -22,6 +22,16 @@ namespace E03_ExtensionMethods
             Console.WriteLine(n.FormatarParaEuro());
             Console.WriteLine(x.FormatarParaEuro());
 
+            
+            int intEuro = 5;
+            Console.WriteLine(intEuro.FormatarParaEuro()); 
+
+            double doubleEuro = 5.5;
+            Console.WriteLine(doubleEuro.FormatarParaEuro()); 
+
+            string stringEuro = "1,1";
+            Console.WriteLine(stringEuro.FormatarParaEuro());
+
             Console.ReadKey();
 
         }
